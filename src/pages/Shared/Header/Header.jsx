@@ -4,7 +4,7 @@ import { Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <Container>
+    <Container className="mb-5">
       <Navbar collapseOnSelect expand="lg">
         <Container>
           <Navbar.Brand className="text-danger fw-bold" href="#home">
