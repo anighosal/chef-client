@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Chef = ({ chef }) => {
   const {
@@ -19,7 +20,9 @@ const Chef = ({ chef }) => {
         <Card.Title>Numbers of recipes: {numberOfRecipes}</Card.Title>
         <Card.Text>Years of experience: {yearsOfExperience}</Card.Text>
         <Card.Text>Likes: {likes}</Card.Text>
-        <Button variant="danger">{viewRecipesButton}</Button>
+        <Link>
+          <Button variant="danger">{viewRecipesButton}</Button>
+        </Link>
       </Card.Body>
       <Card.Footer className="text-muted">2 days ago</Card.Footer>
     </Card>
