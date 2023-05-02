@@ -13,11 +13,10 @@ const NavBar = () => {
             <Nav className="mx-auto">
               <Nav.Link className="text-danger" href="#features">
                 <NavLink to="/">Home</NavLink>
+              </Nav.Link>{" "}
+              <Nav.Link className="text-danger">
+                <NavLink to="/blog">Blog</NavLink>
               </Nav.Link>
-              <Link to="/blog">
-                {" "}
-                <Nav.Link className="text-danger">Blog</Nav.Link>
-              </Link>
             </Nav>
             <Nav>
               <Nav.Link href="#deets">Profile</Nav.Link>

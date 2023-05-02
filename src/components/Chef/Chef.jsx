@@ -6,7 +6,7 @@ const Chef = ({ chef }) => {
   const {
     id,
     chefName,
-    ChefPicture,
+    chefImage,
     likes,
     viewRecipesButton,
     numberOfRecipes,
@@ -15,7 +15,8 @@ const Chef = ({ chef }) => {
   return (
     <Col md={4}>
       <Card className="text-center mb-4">
-        <Card.Img variant="top" src={ChefPicture} />
+        <Card.Img style={{ height: "500px" }} variant="top" src={chefImage} />
+
         <Card.Header>Name: {chefName}</Card.Header>
         <Card.Body>
           <Card.Title>Numbers of recipes: {numberOfRecipes}</Card.Title>
@@ -25,7 +26,6 @@ const Chef = ({ chef }) => {
             <Button variant="danger">{viewRecipesButton}</Button>
           </Link>
         </Card.Body>
-        <Card.Footer className="text-muted">2 days ago</Card.Footer>
       </Card>
     </Col>
   );
