@@ -5,31 +5,34 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { RouterProvider, Link, createBrowserRouter } from "react-router-dom";
 
-import App from "./App";
 import Home from "./components/Home/Home";
-import AllChef from "./components/AllChef/AllChef";
+
 import Section from "./components/Section/Section";
 import Menu from "./components/Menu/Menu";
+import Blog from "./components/Blog/Blog";
+import Main from "./Layout/Main";
+import ChefRecipe from "./components/ChefRecipe/ChefRecipe";
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>,
+    element: <Main></Main>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("http://localhost:5000/allchef"),
       },
       {
-        path: "allchef",
-        element: <AllChef></AllChef>,
+        path: "/chef/:id",
+        element: <ChefRecipe></ChefRecipe>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/allchef/${params.id}`),
       },
+
       {
-        path: "section",
-        element: <Section></Section>,
-      },
-      {
-        path: "menu",
-        element: <Menu></Menu>,
+        path: "blog",
+        element: <Blog></Blog>,
       },
     ],
   },

@@ -1,23 +1,23 @@
 import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg">
         <Container>
-          <Navbar.Brand className="text-danger fw-bold" href="#home">
-            Food Zone
-          </Navbar.Brand>
+          <Navbar.Brand className="text-danger fw-bold">Food Zone</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
               <Nav.Link className="text-danger" href="#features">
-                Home
+                <NavLink to="/">Home</NavLink>
               </Nav.Link>
-              <Nav.Link className="text-danger" href="#pricing">
-                Blog
-              </Nav.Link>
+              <Link to="/blog">
+                {" "}
+                <Nav.Link className="text-danger">Blog</Nav.Link>
+              </Link>
             </Nav>
             <Nav>
               <Nav.Link href="#deets">Profile</Nav.Link>

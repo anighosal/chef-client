@@ -8,7 +8,6 @@ import Menu from "../Menu/Menu";
 const Home = () => {
   return (
     <div>
-      <Header></Header>
       <AllChef></AllChef>
       <Section></Section>
       <Menu></Menu>
