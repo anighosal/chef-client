@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import { Link } from "react-router-dom";
+import Chef from "../Chef/Chef";
 
-const LeftNav = () => {
+const AllChef = ({ chef }) => {
   const [allchef, setAllchef] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/allchef/")
@@ -14,12 +14,10 @@ const LeftNav = () => {
     <div>
       <h2>All chef</h2>
       {allchef.map((chef) => (
-        <p key={chef.id}>
-          <Link>{chef.chefName}</Link>
-        </p>
+        <Chef key={chef.id} chef={chef}></Chef>
       ))}
     </div>
   );
 };
 
-export default LeftNav;
+export default AllChef;
