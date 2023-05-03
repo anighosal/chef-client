@@ -1,10 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import banner from "../../assets/fotor_2023-5-2_1_42_55.jpg";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import { AuthContext } from "../../providers/AuthProvider";
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
   return (
     <Container className="mb-5">
       <Row className="align-items-center">

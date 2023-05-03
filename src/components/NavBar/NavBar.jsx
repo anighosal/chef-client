@@ -13,29 +13,21 @@ const NavBar = () => {
           <Navbar.Brand className="text-danger fw-bold">Food Zone</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto">
-              <Nav.Link className="text-danger" href="#features">
-                <NavLink to="/">Home</NavLink>
-              </Nav.Link>{" "}
-              <Nav.Link className="text-danger">
-                <NavLink to="/blog">Blog</NavLink>
-              </Nav.Link>
+            <Nav className="mx-auto gap-2">
+              <Link to="/">Home</Link>
+
+              <Link to="/blog">Blog</Link>
             </Nav>
             <Nav>
-              {user && (
-                <Nav.Link href="#deets">
-                  <FaUserCircle style={{ fontSize: "2rem" }} />
-                </Nav.Link>
+              {user && <FaUserCircle style={{ fontSize: "2rem" }} />}
+
+              {user ? (
+                <Button variant="danger">Log out</Button>
+              ) : (
+                <Link to="/login">
+                  <Button variant="danger">Login</Button>
+                </Link>
               )}
-              <Nav.Link eventKey={2} href="#memes">
-                {user ? (
-                  <Button variant="danger">Log out</Button>
-                ) : (
-                  <Link to="/login">
-                    <Button variant="danger">Login</Button>
-                  </Link>
-                )}
-              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

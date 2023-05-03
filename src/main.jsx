@@ -3,7 +3,12 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { RouterProvider, Link, createBrowserRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  Link,
+  createBrowserRouter,
+  Navigate,
+} from "react-router-dom";
 
 import Home from "./components/Home/Home";
 
@@ -12,9 +17,10 @@ import Menu from "./components/Menu/Menu";
 import Blog from "./components/Blog/Blog";
 import Main from "./Layout/Main";
 import ChefRecipe from "./components/ChefRecipe/ChefRecipe";
+
+import AuthProvider from "./providers/AuthProvider";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
-import AuthProvider from "./providers/AuthProvider";
 
 const router = createBrowserRouter([
   {
@@ -38,11 +44,11 @@ const router = createBrowserRouter([
         element: <Blog></Blog>,
       },
       {
-        path: "login",
+        path: "/login",
         element: <Login></Login>,
       },
       {
-        path: "register",
+        path: "/register",
         element: <Register></Register>,
       },
     ],
