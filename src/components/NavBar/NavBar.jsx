@@ -20,9 +20,19 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto gap-2">
-              <Link to="/">Home</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "default")}
+                to="/"
+              >
+                Home
+              </NavLink>
 
-              <Link to="/blog">Blog</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "default")}
+                to="/blog"
+              >
+                Blog
+              </NavLink>
             </Nav>
             <Nav>
               {user && <FaUserCircle style={{ fontSize: "2rem" }} />}

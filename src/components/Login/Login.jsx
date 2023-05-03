@@ -1,10 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 
 import { Button, Container, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import app from "../../firebase/firebase.config";
 
 const Login = () => {
+  const auth = getAuth(app);
+  console.log(app);
+  const provider = new GoogleAuthProvider();
   const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -25,6 +30,17 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+      })
+      .catch((error) => {
+        console.log("error", error.message);
       });
   };
   return (
@@ -59,6 +75,15 @@ const Login = () => {
         <br />
         <Form.Text className="text-danger"></Form.Text>
       </Form>
+      <Link to="/">
+        {" "}
+        <Button onClick={handleGoogleSignIn} variant="secondary">
+          Google sign-in
+        </Button>{" "}
+      </Link>
+      <Link to="/">
+        <Button variant="secondary">Github sign-in</Button>{" "}
+      </Link>
     </Container>
   );
 };

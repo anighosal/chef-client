@@ -1,13 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const [accepted, setAccepted] = useState(false);
+  const [registerError, setRegisterError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleRegister = (event) => {
     event.preventDefault();
+    setSuccess("");
     const form = event.target;
     const name = form.name.value;
     const photo = form.photo.value;
@@ -20,10 +24,17 @@ const Register = () => {
       .then((result) => {
         const createdUser = result.user;
         console.log(createdUser);
+        setRegisterError("");
+        event.target.reset();
+        setSuccess("User has been created succesfully");
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error.message);
+        setRegisterError(error.message);
       });
+  };
+  const handleAccepted = (event) => {
+    setAccepted(event.target.checked);
   };
   return (
     <Container className="md:mx-auto md:w-25">
@@ -57,12 +68,19 @@ const Register = () => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check
+            onClick={handleAccepted}
             type="checkbox"
             name="accept"
-            label="Accept Terms And Conditions"
+            label={
+              <>
+                Accept <Link to="/terms">Terms And Conditions</Link>
+              </>
+            }
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <p className="text-danger">{registerError}</p> <br />
+        <p className="text-success">{success}</p> <br />
+        <Button variant="primary" disabled={!accepted} type="submit">
           Register
         </Button>{" "}
         <br />
