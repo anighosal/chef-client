@@ -1,16 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Card, CardGroup } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
 import pasta from "../../assets/launch food.jpg";
 import pizza from "../../assets/licensed-image.jpg";
 import chicken from "../../assets/Chicken-Parmesan-1.jpg";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import FavouriteBtn from "../FavouriteBtn/FavouriteBtn";
 
 const ChefRecipe = () => {
-  const handleFavouriteBtn = () => {
-    toast("my favourite item here");
-  };
   const sigleChef = useLoaderData();
   const {
     chefName,
@@ -58,10 +54,7 @@ const ChefRecipe = () => {
             </p>
           </Card.Body>
           <Card.Footer>
-            <Button onClick={handleFavouriteBtn} variant="danger">
-              Favourite Button
-            </Button>{" "}
-            <ToastContainer />
+            <FavouriteBtn></FavouriteBtn>
           </Card.Footer>
         </Card>
         <Card>
@@ -84,10 +77,7 @@ const ChefRecipe = () => {
             </p>
           </Card.Body>
           <Card.Footer>
-            <Button onClick={handleFavouriteBtn} variant="danger">
-              Favourite Button
-            </Button>{" "}
-            <ToastContainer />
+            <FavouriteBtn></FavouriteBtn>
           </Card.Footer>
         </Card>
         <Card>
@@ -108,10 +98,7 @@ const ChefRecipe = () => {
             </p>
           </Card.Body>
           <Card.Footer>
-            <Button onClick={handleFavouriteBtn} variant="danger">
-              Favourite Button
-            </Button>{" "}
-            <ToastContainer />
+            <FavouriteBtn></FavouriteBtn>
           </Card.Footer>
         </Card>
       </CardGroup>

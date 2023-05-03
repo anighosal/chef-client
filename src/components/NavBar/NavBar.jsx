@@ -14,7 +14,7 @@ const NavBar = () => {
   };
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg">
+      <Navbar style={{ zIndex: 100 }} collapseOnSelect expand="lg">
         <Container>
           <Navbar.Brand className="text-danger fw-bold">Food Zone</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

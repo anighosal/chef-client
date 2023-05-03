@@ -23,6 +23,7 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import PrivateRoute from "./route/PrivateRoute";
 import Terms from "./components/Terms/Terms";
+import Error from "./Error";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
         element: <Terms></Terms>,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <Error></Error>,
   },
 ]);
 
