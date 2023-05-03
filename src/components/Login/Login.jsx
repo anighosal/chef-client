@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <Container className="mx-auto w-25">
+    <Container className="md:mx-auto md:w-25">
       <h3>Please Login</h3>
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
