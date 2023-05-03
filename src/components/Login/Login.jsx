@@ -1,5 +1,10 @@
 import React, { useContext, useState } from "react";
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import {
+  GithubAuthProvider,
+  GoogleAuthProvider,
+  getAuth,
+  signInWithPopup,
+} from "firebase/auth";
 
 import { Button, Container, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -9,7 +14,8 @@ import app from "../../firebase/firebase.config";
 const Login = () => {
   const auth = getAuth(app);
   console.log(app);
-  const provider = new GoogleAuthProvider();
+  const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
   const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -34,7 +40,18 @@ const Login = () => {
   };
 
   const handleGoogleSignIn = () => {
-    signInWithPopup(auth, provider)
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+      })
+      .catch((error) => {
+        console.log("error", error.message);
+      });
+  };
+
+  const handleGithubSignIn = () => {
+    signInWithPopup(auth, githubProvider)
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
@@ -75,15 +92,12 @@ const Login = () => {
         <br />
         <Form.Text className="text-danger"></Form.Text>
       </Form>
-      <Link to="/">
-        {" "}
-        <Button onClick={handleGoogleSignIn} variant="secondary">
-          Google sign-in
-        </Button>{" "}
-      </Link>
-      <Link to="/">
-        <Button variant="secondary">Github sign-in</Button>{" "}
-      </Link>
+      <Button onClick={handleGoogleSignIn} variant="secondary">
+        Google sign-in
+      </Button>{" "}
+      <Button onClick={handleGithubSignIn} variant="secondary">
+        Github sign-in
+      </Button>{" "}
     </Container>
   );
 };

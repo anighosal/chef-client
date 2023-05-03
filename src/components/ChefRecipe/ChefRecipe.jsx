@@ -15,7 +15,11 @@ const ChefRecipe = () => {
   console.log(sigleChef);
   return (
     <Card className="text-center mb-4">
-      <Card.Img variant="top" src={chefImage} />
+      <Card.Img
+        style={{ height: "500px", width: "200px" }}
+        variant="top"
+        src={chefImage}
+      />
 
       <Card.Header>Name: {chefName}</Card.Header>
       <Card.Body>
