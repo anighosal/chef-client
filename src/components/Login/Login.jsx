@@ -10,6 +10,7 @@ import { Button, Container, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import app from "../../firebase/firebase.config";
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Login = () => {
   const auth = getAuth(app);
@@ -93,10 +94,10 @@ const Login = () => {
         <Form.Text className="text-danger"></Form.Text>
       </Form>
       <Button onClick={handleGoogleSignIn} variant="secondary">
-        Google sign-in
+        <FaGoogle /> Google sign-in
       </Button>{" "}
       <Button onClick={handleGithubSignIn} variant="secondary">
-        Github sign-in
+        <FaGithub /> Github sign-in
       </Button>{" "}
     </Container>
   );

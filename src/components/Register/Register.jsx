@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { getAuth, updateProfile } from "firebase/auth";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -24,6 +25,20 @@ const Register = () => {
       .then((result) => {
         const createdUser = result.user;
         console.log(createdUser);
+
+        const auth = getAuth();
+        updateProfile(auth.currentUser, {
+          displayName: name,
+          photoURL: photo,
+        })
+          .then(() => {
+            // Profile updated!
+            // ...
+          })
+          .catch((error) => {
+            // An error occurred
+            // ...
+          });
         setRegisterError("");
         event.target.reset();
         setSuccess("User has been created succesfully");
@@ -46,7 +61,12 @@ const Register = () => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Photo Url</Form.Label>
-          <Form.Control type="text" name="photo" placeholder="text" required />
+          <Form.Control
+            type="photoURL"
+            name="photo"
+            placeholder="photoURL"
+            required
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

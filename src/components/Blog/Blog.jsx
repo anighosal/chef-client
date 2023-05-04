@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-
+import Pdf from "react-to-pdf";
+const ref = React.createRef();
 const Blog = () => {
   return (
     <Container>
@@ -47,7 +48,18 @@ const Blog = () => {
         Custom hooks can help you abstract away complex implementation details
         and provide a simpler interface for your components. This can make your
         code easier to reason about and maintain.
-      </p>
+      </p>{" "}
+      <br />
+      <div ref={ref}>
+        <h1>Pdf file here</h1>
+      </div>
+      <Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => (
+          <button className="text-danger" onClick={toPdf}>
+            Download file
+          </button>
+        )}
+      </Pdf>
     </Container>
   );
 };

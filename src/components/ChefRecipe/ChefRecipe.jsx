@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import { Button, Card, CardGroup } from "react-bootstrap";
+import { Card, CardGroup } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
 import pasta from "../../assets/launch food.jpg";
 import pizza from "../../assets/licensed-image.jpg";
 import chicken from "../../assets/Chicken-Parmesan-1.jpg";
 import FavouriteBtn from "../FavouriteBtn/FavouriteBtn";
+import { Rating } from "@smastrom/react-rating";
+
+import LazyLoad from "react-lazy-load";
+
+import "@smastrom/react-rating/style.css";
 
 const ChefRecipe = () => {
+  const [rating, setRating] = useState(0);
   const sigleChef = useLoaderData();
   const {
     chefName,
@@ -19,7 +25,10 @@ const ChefRecipe = () => {
   console.log(sigleChef);
   return (
     <Card className="mx-auto mt-5" style={{ width: "30rem" }}>
-      <Card.Img variant="top" src={chefImage} />
+      <h2 className="fw-bold text-primary text-center">Chef Recipe</h2>
+      <LazyLoad offset={300}>
+        <Card.Img variant="top" src={chefImage} />
+      </LazyLoad>
       <Card.Body>
         <Card.Title>Name: {chefName}</Card.Title>
 
@@ -52,6 +61,13 @@ const ChefRecipe = () => {
               minutes or until the crust is golden brown and the cheese is
               melted
             </p>
+            <span>
+              <Rating
+                style={{ maxWidth: 250 }}
+                value={rating}
+                onChange={setRating}
+              />
+            </span>
           </Card.Body>
           <Card.Footer>
             <FavouriteBtn></FavouriteBtn>
@@ -75,6 +91,13 @@ const ChefRecipe = () => {
               minutes or until the crust is golden brown and the cheese is
               melted.
             </p>
+            <span>
+              <Rating
+                style={{ maxWidth: 250 }}
+                value={rating}
+                onChange={setRating}
+              />
+            </span>
           </Card.Body>
           <Card.Footer>
             <FavouriteBtn></FavouriteBtn>
@@ -96,6 +119,13 @@ const ChefRecipe = () => {
               flour, dip in the beaten eggs, and coat in the Italian
               breadcrumbs. Heat oil in a large skillet over medium heat. Add the
             </p>
+            <span>
+              <Rating
+                style={{ maxWidth: 250 }}
+                value={rating}
+                onChange={setRating}
+              />
+            </span>
           </Card.Body>
           <Card.Footer>
             <FavouriteBtn></FavouriteBtn>

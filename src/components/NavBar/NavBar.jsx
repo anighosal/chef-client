@@ -13,7 +13,7 @@ const NavBar = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div>
+    <Container>
       <Navbar style={{ zIndex: 100 }} collapseOnSelect expand="lg">
         <Container>
           <Navbar.Brand className="text-danger fw-bold">Food Zone</Navbar.Brand>
@@ -50,7 +50,7 @@ const NavBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </div>
+    </Container>
   );
 };
 
