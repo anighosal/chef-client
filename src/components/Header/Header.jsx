@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 import img1 from "../../assets/banner1.png";
 import img2 from "../../assets/banner2.png";
 import img3 from "../../assets/banner3.jpg";
-import "./Header.css";
 
 const Header = () => {
   const location = useLocation();

@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import "./Blog.css";
 
 const Blog = () => {
   const downloadPdf = () => {

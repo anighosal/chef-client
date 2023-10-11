@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
 
-import "./ChefRecipe.css"; // Import a CSS file for styling
 import Chefs3recipe from "../Chefs3recipe/Chefs3recipe";
 import { FaArrowDown } from "react-icons/fa";
 

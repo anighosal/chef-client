@@ -3,7 +3,6 @@ import breakfast from "../../assets/breakfast food.jpg";
 import lunch from "../../assets/launch food.jpg";
 import even from "../../assets/evening food.jpg";
 import dinner from "../../assets/dinner food.jpg";
-import "./Section.css";
 
 import { Col, Container, Row } from "react-bootstrap";
 

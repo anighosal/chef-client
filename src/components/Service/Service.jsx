@@ -1,5 +1,5 @@
 import React from "react";
-import "./Service.css";
+
 import { Col, Container, Row } from "react-bootstrap";
 import img1 from "../../assets/dinner.jpg";
 import img2 from "../../assets/meal.jpg";

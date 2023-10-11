@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./chef.css";
+
 import { FaFacebook, FaGithub } from "react-icons/fa";
 
 const Chef = ({ chef }) => {

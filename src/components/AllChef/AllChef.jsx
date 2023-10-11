@@ -2,7 +2,6 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import Chef from "../Chef/Chef";
 import { Container, Row } from "react-bootstrap";
-import "./AllChef.css";
 
 const AllChef = () => {
   const chefData = useLoaderData();

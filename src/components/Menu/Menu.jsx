@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import menu from "../../assets/menu (2).jpg";
-import "./Menu.css";
 
 const Menu = () => {
   return (

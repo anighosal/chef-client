@@ -5,6 +5,57 @@ a{
     color:rgb(0, 0, 0)
 }
 
+.custom-link .nav-link {
+    color: #000; /* Replace with your desired non-active color */
+    font-family: sans-serif; 
+    }
+  .custom-link .nav-link .active {
+    font-family: sans-serif; 
+    font-weight: 700;
+    font-size: medium;
+    color: #000;
+    }
+  
+    .nav-link {
+      text-decoration: none !important;
+      border: none !important; 
+    }
+  
+    .custom-link:hover {
+      color: #FA4238 !important;
+    }
+  
+  
+  /* YourComponent.css */
+  
+  .custom-btn {
+    background-color: #007bff; /* Default background color */
+    color: #fff; /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  
+    /* Additional styles for padding, border, etc. */
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .btn{
+   background-color:#FA4238 !important;
+  }
+  
+  .btn:hover{
+    background-color: #f51409 !important;
+  }
+  .nav-bg{
+    background-color: #fff;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3)
+  }
+  
+  
+  
+
 
 .favorite-button {
     border: none;
@@ -41,5 +92,339 @@ a{
   }
 
 }
+.photo{
+    border-radius: 10px;
+    border-color: brown;
+    border: 1px solid #b37979
+}
+
+.bg{
+   background-color: #FDF8F1 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+}
+.bg:hover{
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    
+}
+.color{
+  background-color: yellow;
+  display: inline-block;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+   
+    .chef-photo {
+      width: 100% !important;
+      height: auto !important;
+      
+    
+    }
+  
+  }
+
+  .chef-photo{
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .upper-shadow {
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .food-col:hover img{
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+
+.food-col p{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: large;
+}
+
+/* Section.css or your global styles file */
+
+  
+  /* Media query for small devices */
+  @media (max-width: 768px) {
+    .food-image {
+      height: auto;
+      width: 100%; /* Make the images take full width on small devices */
+    }
+  }
+  @media (max-width: 768px) {
+    .food-image:hover{
+      transform: scale(1.1) !important; 
+      transition: transform 0.3s ease !important;
+  }
+  }
+  @media (max-width: 768px) {
+    Row {
+      margin-left: none;
+      width: 100%; /* Make the images take full width on small devices */
+    }
+  }
+  .center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: auto;
+  }
+/* CSS in your Section.css file */
+@media (max-width: 768px) {
+    .full-width-image {
+      width: auto !important;
+      height: auto !important;
+      align-items: center;
+    }
+  }
+
+  .color{
+    color: #FA4238;
+}
+
+.bg-chef{
+  background-color: #FDF8F1 !important;
+    background-size: cover;
+  }
+
+  @media (max-width: 768px) {
+    hr {
+      display: none;
+    }
+  }
+ 
+  @media (max-width: 768px) {
+    text-container {
+      align-items: center;
+    }
+  }
+  @media (max-width: 768px) {
+    br {
+      display: none;
+    }
+  }
+
+  .h5 {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.p{
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+/* Add this CSS to your stylesheet or style tag */
+.custom-card {
+    width: 300px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the Card horizontally */
+    border: 1px solid #fffefe ; 
+    border-radius: 10px;
+    padding: 10px; /* Optional: Add padding for spacing */
+    
+    background-color: transparent !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  .custom-card:hover{
+    background-color: white; 
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5); 
+    color: #000;
+    
+  }
+
+  @media (max-width: 768px) {
+   
+    .custom-card {
+      width: 100% !important;
+    }
+    .custom-card:hover {
+      background-color: white;
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5); 
+      color: #000;
+    }
+  }
+ 
+
+
+  .custom-text {
+    color: #FDF8F1;
+  }
+
+  .bg-color{
+    background-color:#FA4238 ;
+  }
+  .bg-color:hover{
+    background-color: #f51409 !important; 
+  }
+  .image:hover{
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+   
+    
+  }
+  .image{
+    padding-top: 3px;
+  }
+
+  .photo{
+    border-radius: 10px;
+    border-color: brown;
+    border: 1px solid #b37979
+  }
+  
+  .bg{
+   background-color: #FDF8F1 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+  }
+  .bg:hover{
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    
+  }
+  .color{
+  background-color: yellow;
+  display: inline-block;
+  align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+   
+    .chef-photo {
+      width: auto !important;
+      height: auto !important;
+      
+    
+    }
+  
+  }
+  
+  .chef-photo{
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .custom-text {
+    color:  #FA4238 !important;
+  }
+
+  .img {
+    height: 500px;
+    width: 500px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .img {
+        /* Adjust the height and width for small devices */
+        width: 250px !important;
+        height:250px !important;
+        
+    }
+    .img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+   
+}
+
+@media (max-width: 768px) {
+  .header {
+      margin-top: 20px !important; /* Adjust the gap as needed */
+  }
+}
+
+.img{
+    height: 500px;
+    width: 500px;
+}
+
+.button-style {
+    border: 1px solid #FA4238;
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: background-color 0.3s; 
+  }
+  
+  .button-style:hover {
+    background-color: #FA4238; 
+    text-emphasis-color: white;
+   
+  }
+
+  /* CSS in your Menu.css file */
+
+
+@media (max-width: 768px) {
+  .full-img {
+    width: 100% !important;
+    display: block;
+    margin: 0 auto !important; /* Center the image horizontally */
+  }
+
+  .button-style{
+    margin: 0 auto;
+  }
+}
+
+.custom-text{
+    color: #FA4238;
+}
+
+.service-image{
+    height: 400px;
+    width: 270px;
+}
+.service-image:hover{
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    br {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .service-image {
+      width: 300px !important;
+      height: 300px !important;
+    }
+  }
+
+
+
+
+
+
+  /* #FDF8F1
+
+
+  #FA4238
+
+  #FA4238 */
+ 
+  
+  
+  
+  
+  
+  
+
+
+   
+
+    
+
+
+
+  
 
   

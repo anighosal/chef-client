@@ -4,7 +4,6 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
 import img from "../../../public/download .png";
-import "./Navbar.css";
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
