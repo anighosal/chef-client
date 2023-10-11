@@ -23,7 +23,7 @@
 @media (max-width: 768px) {
    
     .chef-photo {
-      width: auto !important;
+      width: 100% !important;
       height: auto !important;
       
     
