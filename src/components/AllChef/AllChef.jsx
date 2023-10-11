@@ -35,8 +35,8 @@ const AllChef = () => {
         </p>
 
         <Row>
-          {chefData.map((chef) => (
-            <Chef key={chef.id} chef={chef}></Chef>
+          {chefData?.map((chef) => (
+            <Chef key={chef?.id} chef={chef}></Chef>
           ))}
         </Row>
       </Container>

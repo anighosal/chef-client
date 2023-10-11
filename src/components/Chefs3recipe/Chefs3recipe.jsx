@@ -40,7 +40,7 @@ const Chefs3recipe = () => {
         className="mb-3 nav-tabs"
         justify
       >
-        {recipes.map((recipe) => (
+        {recipes?.map((recipe) => (
           <Tab key={recipe.id} eventKey={recipe.id} title={recipe.recipeName}>
             <Row className="mt-5" key={recipe.id} noGutters>
               <Col className="ms-5">
@@ -97,7 +97,7 @@ const Chefs3recipe = () => {
                     Ingredient
                   </h6>
                   <ul style={{ fontFamily: "sans-serif", fontWeight: "light" }}>
-                    {recipe.ingredients.map((ingredient, index) => (
+                    {recipe?.ingredients?.map((ingredient, index) => (
                       <li key={index}>{ingredient}</li>
                     ))}
                   </ul>
