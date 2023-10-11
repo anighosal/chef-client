@@ -12,8 +12,6 @@ import {
 
 import Home from "./components/Home/Home";
 
-import Section from "./components/Section/Section";
-import Menu from "./components/Menu/Menu";
 import Blog from "./components/Blog/Blog";
 import Main from "./Layout/Main";
 import ChefRecipe from "./components/ChefRecipe/ChefRecipe";
@@ -22,7 +20,7 @@ import AuthProvider from "./providers/AuthProvider";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import PrivateRoute from "./route/PrivateRoute";
-import Terms from "./components/Terms/Terms";
+
 import Error from "./Error";
 import Chefs3recipe from "./components/Chefs3recipe/Chefs3recipe";
 
