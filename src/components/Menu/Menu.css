@@ -1,0 +1,32 @@
+.img{
+    height: 500px;
+    width: 500px;
+}
+
+.button-style {
+    border: 1px solid #FA4238;
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: background-color 0.3s; 
+  }
+  
+  .button-style:hover {
+    background-color: #FA4238; 
+    text-emphasis-color: white;
+   
+  }
+
+  /* CSS in your Menu.css file */
+
+
+@media (max-width: 768px) {
+  .full-img {
+    width: 100% !important;
+    display: block;
+    margin: 0 auto !important; /* Center the image horizontally */
+  }
+
+  .button-style{
+    margin: 0 auto;
+  }
+}

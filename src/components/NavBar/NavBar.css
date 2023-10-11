@@ -1,0 +1,50 @@
+.custom-link .nav-link {
+    color: #000; /* Replace with your desired non-active color */
+    font-family: sans-serif; 
+    }
+  .custom-link .nav-link .active {
+    font-family: sans-serif; 
+    font-weight: 700;
+    font-size: medium;
+    color: #000;
+    }
+  
+    .nav-link {
+      text-decoration: none !important;
+      border: none !important; 
+    }
+  
+    .custom-link:hover {
+      color: #FA4238 !important;
+    }
+  
+  
+  /* YourComponent.css */
+  
+  .custom-btn {
+    background-color: #007bff; /* Default background color */
+    color: #fff; /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  
+    /* Additional styles for padding, border, etc. */
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .btn{
+   background-color:#FA4238 !important;
+  }
+  
+  .btn:hover{
+    background-color: #f51409 !important;
+  }
+  .nav-bg{
+    background-color: #fff;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3)
+  }
+  
+  
+  

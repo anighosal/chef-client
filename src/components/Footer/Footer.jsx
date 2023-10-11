@@ -1,34 +1,57 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import img from "../../../public/download .png";
+import { FaFacebook, FaGithub } from "react-icons/fa";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <Container className="bg-black mt-5">
-      <Row>
-        <Col className="text-white">
-          <h1>Menu</h1>
-          <p>Starter</p>
-          <p>Main</p>
-          <p>Snacks</p>
-          <p>Dessert</p>
-        </Col>
-        <Col className="text-white">
-          <h1>Chefs</h1>
-          <p>Gennaro Contaldo</p>
-          <p>Giada De Laurentiis</p>
-          <p>Antonio Carluccio</p>
-          <p>Mario Batali</p>
-        </Col>
-        <Col className="text-white">
-          <h1>Address</h1>
-          <p>
-            Name: Food Zone <br /> Address: 123 Main Street, Suite 456 <br />{" "}
-            City: Anytown State/Province: Any State/Province Postal code: 12345
-            Country: United States <br /> Phone number: +1 (123) 456-7890
-          </p>
-        </Col>
-      </Row>
-    </Container>
+    <div className="upper-shadow ">
+      <Container className="text-black mt-5 pt-3 w-[90%]">
+        <Row className="mx-auto ps-5 w-[90%] pt-3 mt-5">
+          <Col xs={12} md={3} className="text-center text-md-start">
+            <h4 style={{ fontFamily: "sans-serif", fontStyle: "bold" }}>
+              Menu
+            </h4>
+            <p style={{ fontFamily: "sans-serif", fontStyle: "normal" }}>
+              Starter <br />
+              Main <br />
+              Snacks <br />
+              Dessert
+            </p>
+          </Col>
+          <Col xs={12} md={3} className="text-center text-md-start">
+            <h4 style={{ fontFamily: "sans-serif", fontStyle: "bold" }}>
+              Chefs
+            </h4>
+            <p style={{ fontFamily: "sans-serif", fontStyle: "normal" }}>
+              Gennaro Contaldo <br />
+              Giada De Laurentiis <br />
+              Antonio Carluccio <br />
+              Mario Batali
+            </p>
+          </Col>
+          <Col xs={12} md={3} className="text-center text-md-start">
+            <h4 style={{ fontFamily: "sans-serif", fontStyle: "bold" }}>
+              Address
+            </h4>
+            <p style={{ fontFamily: "sans-serif", fontStyle: "normal" }}>
+              323 Main Street, Suite 456 <br /> Anytown State/Province: Any
+              State/Province 32345 <br />
+              United States <br /> Phone number: +1 (123) 456-7890
+            </p>
+          </Col>
+          <Col xs={12} md={3} className="text-center">
+            <img
+              className="w-100 mt-5"
+              src={img}
+              alt="name"
+              style={{ maxWidth: "200px", height: "auto", opacity: "0.8" }}
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 

@@ -1,0 +1,35 @@
+.color{
+    color: #FA4238;
+}
+
+.bg-chef{
+  background-color: #FDF8F1 !important;
+    background-size: cover;
+  }
+
+  @media (max-width: 768px) {
+    hr {
+      display: none;
+    }
+  }
+ 
+  @media (max-width: 768px) {
+    text-container {
+      align-items: center;
+    }
+  }
+  @media (max-width: 768px) {
+    br {
+      display: none;
+    }
+  }
+ 
+  
+  
+  
+  
+  
+  
+
+
+   

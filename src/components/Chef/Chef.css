@@ -1,0 +1,62 @@
+/* Add this CSS to your stylesheet or style tag */
+.custom-card {
+    width: 300px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the Card horizontally */
+    border: 1px solid #fffefe ; 
+    border-radius: 10px;
+    padding: 10px; /* Optional: Add padding for spacing */
+    
+    background-color: transparent !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  .custom-card:hover{
+    background-color: white; 
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5); 
+    color: #000;
+    
+  }
+
+  @media (max-width: 768px) {
+   
+    .custom-card {
+      width: 100% !important;
+    }
+    .custom-card:hover {
+      background-color: white;
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5); 
+      color: #000;
+    }
+  }
+ 
+
+
+  .custom-text {
+    color: #FDF8F1;
+  }
+
+  .bg-color{
+    background-color:#FA4238 ;
+  }
+  .bg-color:hover{
+    background-color: #f51409 !important; 
+  }
+  .image:hover{
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+   
+    
+  }
+  .image{
+    padding-top: 3px;
+  }
+
+
+
+
+
+  /* #FDF8F1
+
+
+  #FA4238
+
+  #FA4238 */

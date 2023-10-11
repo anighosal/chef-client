@@ -1,0 +1,30 @@
+.custom-text {
+    color:  #FA4238 !important;
+  }
+
+  .img {
+    height: 500px;
+    width: 500px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .img {
+        /* Adjust the height and width for small devices */
+        width: 250px !important;
+        height:250px !important;
+        
+    }
+    .img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+   
+}
+
+@media (max-width: 768px) {
+  .header {
+      margin-top: 20px !important; /* Adjust the gap as needed */
+  }
+}

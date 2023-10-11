@@ -24,6 +24,7 @@ import Register from "./components/Register/Register";
 import PrivateRoute from "./route/PrivateRoute";
 import Terms from "./components/Terms/Terms";
 import Error from "./Error";
+import Chefs3recipe from "./components/Chefs3recipe/Chefs3recipe";
 
 const router = createBrowserRouter([
   {
@@ -33,8 +34,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () =>
-          fetch(" https://the-chef-recipe-server-anighosal.vercel.app/allchef"),
+        loader: () => fetch("http://localhost:5000/allChef"),
       },
       {
         path: "/chef/:id",
@@ -44,9 +44,13 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://the-chef-recipe-server-anighosal.vercel.app/allchef/${params.id}`
-          ),
+          fetch(`http://localhost:5000/allChef/${params.id}`),
+      },
+      {
+        path: "/chef/:id",
+        element: <Chefs3recipe></Chefs3recipe>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/allChef/${params.id}`),
       },
 
       {

@@ -1,0 +1,53 @@
+.food-col:hover img{
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+
+.food-col p{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: large;
+}
+
+/* Section.css or your global styles file */
+
+  
+  /* Media query for small devices */
+  @media (max-width: 768px) {
+    .food-image {
+      height: auto;
+      width: 100%; /* Make the images take full width on small devices */
+    }
+  }
+  @media (max-width: 768px) {
+    .food-image:hover{
+      transform: scale(1.1) !important; 
+      transition: transform 0.3s ease !important;
+  }
+  }
+  @media (max-width: 768px) {
+    Row {
+      margin-left: none;
+      width: 100%; /* Make the images take full width on small devices */
+    }
+  }
+  .center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: auto;
+  }
+/* CSS in your Section.css file */
+@media (max-width: 768px) {
+    .full-width-image {
+      width: auto !important;
+      height: auto !important;
+      align-items: center;
+    }
+  }
+    
+
+
+
+  

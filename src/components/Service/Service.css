@@ -1,0 +1,25 @@
+.custom-text{
+    color: #FA4238;
+}
+
+.service-image{
+    height: 400px;
+    width: 270px;
+}
+.service-image:hover{
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    br {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .service-image {
+      width: 300px !important;
+      height: 300px !important;
+    }
+  }
