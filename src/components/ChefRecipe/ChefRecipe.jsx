@@ -4,7 +4,6 @@ import { useLoaderData } from "react-router-dom";
 
 import Chefs3recipe from "../Chefs3recipe/Chefs3recipe";
 import { FaArrowDown } from "react-icons/fa";
-import "./ChefRecipe.css";
 
 const ChefRecipe = () => {
   const [rating, setRating] = useState(0);

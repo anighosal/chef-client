@@ -5,7 +5,6 @@ import Rating from "../Rating/Rating";
 import { FaHeart } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./Chefs3recipe.css";
 
 const Chefs3recipe = () => {
   const sigleChef = useLoaderData();

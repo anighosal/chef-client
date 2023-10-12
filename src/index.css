@@ -57,7 +57,8 @@ a{
   
 
 
-.favorite-button {
+
+  .favorite-button {
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -83,7 +84,8 @@ a{
 @media (max-width: 768px) {
    
   .chef-photo {
-    width: 300px !important;
+    width: 100% !important;
+    margin-left: auto !important;
     height: auto !important;
     align-items: center !important;
   
@@ -91,44 +93,53 @@ a{
   
   }
 
+  .img{
+    width: 100 !important;
+    margin-left: auto !important;
+    height: auto !important;
+    align-items: center !important;
+  }
+
 }
+
+  
 .photo{
-    border-radius: 10px;
-    border-color: brown;
-    border: 1px solid #b37979
+  border-radius: 10px;
+  border-color: brown;
+  border: 1px solid #b37979
 }
 
 .bg{
-   background-color: #FDF8F1 !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    
+ background-color: #FDF8F1 !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  
 }
 .bg:hover{
-   
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    
+ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  
 }
 .color{
-  background-color: yellow;
-  display: inline-block;
-  align-items: center;
+background-color: yellow;
+display: inline-block;
+align-items: center;
 }
 
 @media (max-width: 768px) {
-   
-    .chef-photo {
-      width: 100% !important;
-      height: auto !important;
-      
+ 
+  .chef-photo {
+    width: 100% !important;
+    height: auto !important;
     
-    }
   
   }
 
-  .chef-photo{
-    object-fit: cover;
-    object-position: top;
-  }
+}
+
+.chef-photo{
+  object-fit: cover;
+  object-position: top;
+}
 
   .upper-shadow {
     box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
