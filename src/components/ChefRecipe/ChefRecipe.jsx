@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 
 import Chefs3recipe from "../Chefs3recipe/Chefs3recipe";
 import { FaArrowDown } from "react-icons/fa";
+import "./ChefRecipe.css";
 
 const ChefRecipe = () => {
   const [rating, setRating] = useState(0);
@@ -22,7 +23,7 @@ const ChefRecipe = () => {
     <div>
       <Container className="w-[90%] bg">
         <Row className="p-4">
-          <Col>
+          <Col xs={12} md={6}>
             {/* Apply CSS class for styling */}
             <img
               src={chefImage}
@@ -34,7 +35,7 @@ const ChefRecipe = () => {
               alt=""
             />
           </Col>
-          <Col className="mt-5 text-start">
+          <Col xs={12} md={6} className="mt-5 text-start">
             <h5 style={{ fontFamily: "sans-serif", fontWeight: "bold" }}>
               {chefName}
             </h5>

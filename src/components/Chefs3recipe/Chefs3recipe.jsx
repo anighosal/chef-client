@@ -5,6 +5,7 @@ import Rating from "../Rating/Rating";
 import { FaHeart } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./Chefs3recipe.css";
 
 const Chefs3recipe = () => {
   const sigleChef = useLoaderData();
@@ -32,7 +33,7 @@ const Chefs3recipe = () => {
   };
 
   return (
-    <Container className="mt-5 bg">
+    <Container className="mt-5 bg chef-recipe-container">
       <Tabs
         defaultActiveKey={recipes.length > 0 ? recipes[0].id : "home"}
         id="recipe-tabs"
@@ -48,9 +49,9 @@ const Chefs3recipe = () => {
             <Row className="mt-5" key={recipe.id} noGutters>
               <Col className="ms-5">
                 <img
-                  style={{ width: "500px", height: "400px" }}
+                  style={{ width: "500px", height: "500px" }}
                   src={recipe.recipeImage}
-                  className="image-center chef-photo ms-5"
+                  className="image-center img chef-photo ms-5"
                   alt=""
                 />
                 <Row className="d-flex mb-3">
@@ -79,7 +80,7 @@ const Chefs3recipe = () => {
                   </Col>
                 </Row>
               </Col>
-              <Col>
+              <Col xs={12} md={6}>
                 <h5 style={{ fontFamily: "sans-serif", fontWeight: "bold" }}>
                   {chefName} says
                 </h5>

@@ -4,10 +4,10 @@ import menu from "../../assets/menu (2).jpg";
 
 const Menu = () => {
   return (
-    <Container className="mt-5 w-[90%]">
+    <Container className="mt-5">
       <Row className="mx-auto ">
-        <Col xs={12} md={6}>
-          <img src={menu} className="img ms-5 full-img" alt="" />
+        <Col>
+          <img src={menu} className="full-img" alt="" />
         </Col>
         <Col xs={12} md={6}>
           <h2

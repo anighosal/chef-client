@@ -62,7 +62,7 @@ const Login = () => {
       });
   };
   return (
-    <Container className="md:mx-auto md:w-25">
+    <Container className="md:mx-auto md:w-20">
       <h3>Please Login</h3>
       <Form onSubmit={handleLogin}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -83,7 +83,7 @@ const Login = () => {
             required
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button className="mb-3" variant="primary" type="submit">
           Submit
         </Button>{" "}
         <br />
