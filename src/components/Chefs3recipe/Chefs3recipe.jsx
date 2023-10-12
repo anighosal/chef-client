@@ -40,7 +40,11 @@ const Chefs3recipe = () => {
         justify
       >
         {recipes?.map((recipe) => (
-          <Tab key={recipe.id} eventKey={recipe.id} title={recipe.recipeName}>
+          <Tab
+            key={recipe?.id}
+            eventKey={recipe?.id}
+            title={recipe?.recipeName}
+          >
             <Row className="mt-5" key={recipe.id} noGutters>
               <Col className="ms-5">
                 <img
