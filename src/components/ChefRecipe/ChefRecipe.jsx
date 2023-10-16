@@ -27,8 +27,8 @@ const ChefRecipe = () => {
             <img
               src={chefImage}
               style={{
-                width: "500px",
-                height: "500px",
+                width: "400px",
+                height: "400px",
               }} // Set fixed width and height
               className="square chef-photo ms-5"
               alt=""

@@ -48,7 +48,7 @@ const Chefs3recipe = () => {
             <Row className="mt-5" key={recipe.id} noGutters>
               <Col className="ms-5">
                 <img
-                  style={{ width: "500px", height: "500px" }}
+                  style={{ width: "400px", height: "400px" }}
                   src={recipe.recipeImage}
                   className="image-center img chef-photo ms-5"
                   alt=""
